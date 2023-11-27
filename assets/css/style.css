@@ -1,0 +1,189 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/*  Added a container css rule. if you use this to any container, it will give the container a width of 80% and max-width of 1200px to prevent overstretching of a conatiner on a larger screen */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* Our services section */
+
+.our-services {
+    display: flex;
+    justify-content: space-between;
+}
+
+.our-services-for-mobile {
+    display: none;
+}
+
+.our-services-header h1,
+.our-partners-header h1 {
+    color: #303030;
+    font-size: 2rem;
+    margin-top: 8rem;
+}
+
+
+/* ///////////////////////////////////////////////////// */
+
+
+/* Our partners section */
+
+.our-partners {
+    display: flex;
+    justify-content: space-between;
+}
+
+.our-partners-for-moblie {
+    display: none;
+}
+
+.our-partners-wrapper,
+.our-services-header {
+    padding: 2rem;
+}
+
+.our-partners-wrapper {
+    background-color: #ffff;
+}
+
+.our-partners-header {
+    margin-bottom: 3rem;
+}
+
+
+/* ///////////////////////////////////////////////////////// */
+
+
+/* STYLING FOR MOBILE VIEW */
+
+@media (max-width: 500px) {
+    .our-partners,
+    .our-services {
+        display: none;
+    }
+    .our-services-header {
+        padding-inline: 0px;
+        margin-block: 3rem;
+    }
+    .our-services-for-mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        align-items: center;
+        margin-bottom: 4rem;
+    }
+    .our-services-for-mobile .service1,
+    .our-services-for-mobile .service2,
+    .our-services-for-mobile .service3 {
+        position: relative;
+    }
+    .our-services-for-mobile .service1 p,
+    .our-services-for-mobile .service2 p,
+    .our-services-for-mobile .service3 p {
+        font-size: 1.8rem;
+        color: #EFEFEF;
+        display: flex;
+        flex-wrap: wrap;
+        position: absolute;
+        bottom: 1rem;
+        left: .8rem;
+    }
+    .our-partners-wrapper {
+        background-color: #ffff;
+    }
+    .our-partners-header h1 {
+        margin-bottom: 1rem;
+        font-size: 2rem;
+    }
+    .our-partners-for-moblie img,
+    .our-services-for-mobile img {
+        width: 100%;
+    }
+    .our-partners-for-moblie {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 2rem;
+        column-gap: 2rem;
+        margin-bottom: 5rem;
+    }
+    .our-partners-wrapper,
+    .our-services-header {
+        padding: 0rem;
+    }
+}
+
+
+/* //////////////////////////////////////////////////////////// */
+
+
+/* STYLING FOR TABLET VIEW */
+
+@media (max-width: 1024px) {
+    .our-partners,
+    .our-services {
+        display: none;
+    }
+    .our-services-header {
+        padding-inline: 0px;
+        margin-block: 3rem;
+    }
+    .our-services-for-mobile {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 3rem;
+        align-items: center;
+        margin-bottom: 4rem;
+    }
+    .our-services-for-mobile .service1,
+    .our-services-for-mobile .service2,
+    .our-services-for-mobile .service3 {
+        position: relative;
+    }
+    .our-services-for-mobile .service1 p,
+    .our-services-for-mobile .service2 p,
+    .our-services-for-mobile .service3 p {
+        font-size: 2rem;
+        color: #EFEFEF;
+        display: flex;
+        flex-wrap: wrap;
+        position: absolute;
+        bottom: 1rem;
+        left: .8rem;
+    }
+    .our-partners-wrapper {
+        background-color: #ffff;
+    }
+    .our-partners-header h1 {
+        margin-bottom: 1rem;
+        font-size: 2rem;
+    }
+    .our-partners-for-moblie img,
+    .our-services-for-mobile img {
+        width: 100%;
+    }
+    .our-partners-for-moblie {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 2rem;
+        column-gap: 2rem;
+        margin-bottom: 5rem;
+    }
+    .our-partners-wrapper,
+    .our-services-header {
+        padding: 0rem;
+    }
+}
