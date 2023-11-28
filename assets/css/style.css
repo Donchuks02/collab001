@@ -9,6 +9,123 @@ img {
 }
 
 
+
+.header {
+    display: flex;
+    padding: 0 4.2rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+  }
+  
+  .nav-list {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+  }
+  
+  .links:link,
+  .links:visited {
+    text-decoration: none;
+    color: #303030;
+    transition: all 0.5s;
+  }
+  
+  .links:hover,
+  .links:active {
+    text-decoration: underline;
+    color: #303030;
+  }
+  
+  .link-list {
+    padding-right: 2rem;
+  }
+  
+  .link:link,
+  .link-visited {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .link:hover,
+  .link-active {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .contact-link {
+    background-color: #155d48;
+    text-align: center;
+    padding: 0.5rem 1.3rem;
+    border-radius: 10px;
+    color: #fff;
+  }
+  
+
+
+/* ********
+
+   ****** HERO SECTION ******
+********** */
+
+.hero-section {
+    padding: 4.8rem 0;
+    background-color: #efefef;
+  }
+  
+  .hero-img {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .hero--img {
+    width: 80%;
+  }
+
+
+  /* ********
+   ****** MISSION SECTION ******
+********** */
+
+.mission {
+    background-color: #155d48;
+    padding: 4.8rem 4rem;
+    overflow: hidden;
+  }
+  
+  .company--overview, .company--overview-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+  }
+  .mb{
+    margin-bottom: 4.8rem;
+  }
+  .header-secondary {
+    font-size: 2rem;
+    color: #efefef;
+    margin-bottom: 2rem;
+  }
+  
+  .company--overview-text {
+    color: #efefef;
+    font-size: 1.2rem;
+    /* width: 30rem; */
+    line-height: 1.5;
+  }
+  
+  .mobile-img{
+    display: none;
+  }
+  
+
 /*  Added a container css rule. if you use this to any container, it will give the container a width of 80% and max-width of 1200px to prevent overstretching of a conatiner on a larger screen */
 
 .container {
@@ -133,6 +250,46 @@ img {
 /* STYLING FOR TABLET VIEW */
 
 @media (max-width: 1024px) {
+
+    .mission{
+        padding: 0 0.1rem 0 0.1rem;
+      }
+    
+      .company--overview-text{
+        width: 100%;
+      }
+    
+      .company--overview,.company--overview-2{
+        display: flex;
+        flex-direction: column;
+        justify-items: start;
+        
+      }
+    
+      .company--overview-2{
+        flex-direction: column-reverse;
+      }
+    
+      .header-secondary{
+        margin-bottom: 1rem;
+      }
+      
+      .company--overview img, .company--overview-2 img {
+        width: 100%;
+        overflow: hidden;
+        object-fit: cover;
+      }
+      .mb{
+        margin-bottom: 10rem;
+      }
+      .desktop-img{
+        display: none;
+      }
+      .mobile-img{
+        display: block;
+    
+      }
+
     .our-partners,
     .our-services {
         display: none;
