@@ -38,7 +38,7 @@ Users should be able to:
 ### Links
 
 - GitHub Repo URL: [Renue collab101 - GitHub](https://github.com/Donchuks02/collab101)
-- Live Site URL: [Renue WebApp](https://colb001.netlify.app/)
+- Live Site URL: [Renue WebApp](https://colab001.netlify.app/)
 - Figma Design URL: [Renue - Figma](https://www.figma.com/file/NqJB2JZGJvFxt5Hw4W7Fsj/Untitled?type=design&node-id=0%3A131&mode=design&t=ODB9gOxKIS1RPXwJ-1)
 
 ## Our process
