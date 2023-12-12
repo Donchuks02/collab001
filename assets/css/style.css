@@ -6,6 +6,7 @@
 
 img {
   max-width: 100%;
+  object-fit: cover;
 }
 
 .header {
@@ -20,6 +21,7 @@ img {
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
+  position: relative;
 }
 
 .nav-list {
@@ -63,6 +65,45 @@ img {
   padding: 0.5rem 1.3rem;
   border-radius: 10px;
   color: #fff;
+}
+.hand-menu {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  display: none;
+  /* background-color: #000; */
+}
+
+.hand-menu span {
+  height: 5px;
+  width: 100%;
+  background-color: #000;
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease;
+}
+
+.hand-menu span:nth-child(1) {
+  top: 25%;
+}
+.hand-menu span:nth-child(3) {
+  top: 75%;
+}
+.hand-menu.active span:nth-child(3) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.hand-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hand-menu.active span:nth-child(1) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 
 /* ********
@@ -209,6 +250,14 @@ img {
 /* STYLING FOR MOBILE VIEW */
 
 @media (max-width: 500px) {
+  .header {
+    margin-bottom: 2rem;
+    padding: 0.5rem 1rem;
+  }
+  .hero-section {
+    padding: 1rem 1rem;
+    margin-bottom: 1rem;
+  }
   .hero--img {
     display: none;
   }
@@ -216,10 +265,22 @@ img {
     display: block;
     width: 100%;
   }
-  
 
   .img-link {
     font-size: 1rem;
+  }
+
+  .mission {
+    padding: 0 1rem;
+  }
+
+  .company--overview,
+  .company--overview-2 {
+    gap: 0;
+  }
+
+  .mb {
+    margin-bottom: 2rem;
   }
 
   .our-partners,
@@ -282,9 +343,29 @@ img {
 /* STYLING FOR TABLET VIEW */
 
 @media (max-width: 1024px) {
+  .header {
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
   .nav-link {
     display: none;
   }
+
+  .hand-menu {
+    display: block;
+  }
+  .hero-section {
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+  /* .hero--img {
+    display: none;
+  }
+  .hero-img-mobile {
+    display: block;
+    width: 100%;
+  } */
 
   .overlay-text {
     top: -28%;
@@ -302,7 +383,7 @@ img {
   }
 
   .mission {
-    padding: 0 0.1rem 0 0.1rem;
+    padding: 0 1rem;
   }
 
   .company--overview-text {
@@ -331,7 +412,7 @@ img {
     object-fit: cover;
   }
   .mb {
-    margin-bottom: 10rem;
+    margin-bottom: 2rem;
   }
   .desktop-img {
     display: none;
