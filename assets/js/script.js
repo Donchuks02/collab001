@@ -1,4 +1,11 @@
 "use strict";
+// FOR THE HEADER HAM BURGER
+const hamMenu = document.querySelector(".hand-menu");
+hamMenu.addEventListener("click", () => {
+  hamMenu.classList.toggle("active");
+});
+console.log(hamMenu);
+
 // STORING ELEMENTS INTO VARIABLE
 const nameInput = document.querySelector(".input-name");
 const emailInput = document.querySelector(".input-email");
