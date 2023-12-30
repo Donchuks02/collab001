@@ -12,7 +12,6 @@
 
 img {
   max-width: 100%;
-
 }
 
 img {
@@ -202,7 +201,6 @@ img {
 
 .mobile-img {
   display: none;
-
 }
 
 /*  Added a container css rule. if you use this to any container, it will give the container a width of 80% and max-width of 1200px to prevent overstretching of a conatiner on a larger screen */
@@ -258,7 +256,96 @@ img {
 }
 
 /* ///////////////////////////////////////////////////////// */
+/* FOOTER SECTION */
 
+footer {
+  margin-top: 1em;
+}
+.contact-info {
+  margin: 1em 0;
+}
+.header-contact {
+  font-size: 1.2em;
+  padding: 1em 0;
+}
+.name,
+.email,
+.message {
+  padding: 0 0 1em 0;
+  font-size: 1em;
+}
+.input-name,
+.input-email {
+  margin-top: 0.5em;
+  padding: 1em 0.5em;
+  width: 100%;
+  border: 1px solid #b8b8b8;
+  border-radius: 5px;
+}
+.input-message {
+  margin-top: 0.5em;
+  padding: 1em 0.5em 5em 0.5em;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #b8b8b8;
+}
+.input-name::placeholder,
+.input-email::placeholder,
+.input-message::placeholder {
+  color: #b8b8b8;
+  font-size: 0.8em;
+}
+.btn-submit {
+  background: var(--primary-primary-color, #155d48);
+  color: #fff;
+  font-family: DM Sans;
+  width: 100%;
+  padding: 0.3em 0;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.footer {
+  margin-top: 2em;
+  font-size: clamp(1em, 14px, 10px);
+}
+.footer-links {
+  margin: 3em 0;
+  display: grid; /* The links have to be 3 rows and 2 columns */
+  grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+  row-gap: 1em;
+}
+.footer a:link {
+  color: #303030;
+  text-decoration: none;
+}
+.footer a:visited {
+  color: #303030;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+.telephone,
+.mail {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 0.5em 0;
+}
+
+/* ERROR STATE STYLING */
+.error {
+  color: salmon;
+  font-style: italic;
+  margin: 0.5em 0;
+}
+.error-border {
+  border: 1px solid salmon;
+}
+.hidden {
+  display: none;
+}
 
 /* ///////////////////////////////////////////////////////////// */
 
@@ -320,11 +407,58 @@ img {
   }
 }
 
+/* STYLING FOR MOBILE VIEW */
+
+@media (max-width: 500px) {
+  .our-partners,
+  .our-services {
+    display: none;
+  }
+  .our-services-for-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 8rem;
+  }
+  .our-partners-for-moblie img,
+  .our-services-for-mobile img {
+    width: 100%;
+  }
+  .our-partners-for-moblie {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2rem;
+    column-gap: 2rem;
+  }
+}
+
+/* STYLING FOR SCREENS BIGGER THAN 500PX */
+@media (min-width: 500px) {
+  footer .container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+  .footer {
+    width: 50%;
+  }
+  .contact-info {
+    width: 50%;
+    order: 1;
+  }
+  .footer-logo {
+    margin-bottom: 5em;
+  }
+  .footer-links {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+  }
+}
+
 /* //////////////////////////////////////////////////////////// */
 
 /* STYLING FOR TABLET VIEW */
-
-@media (max-width: 1024px) {
 
 /* STYLING FOR MOBILE VIEW */
 
